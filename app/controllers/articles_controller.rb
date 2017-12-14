@@ -18,4 +18,17 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(:title => params['title'], :body => params['body'])
+      redirect_to article_path(@article.id)
+    else
+      render :update
+    end
+  end
 end
