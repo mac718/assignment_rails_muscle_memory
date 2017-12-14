@@ -2,6 +2,10 @@ class ArticlesController < ApplicationController
   def new 
   end
 
+  def index
+    @articles = Article.all
+  end
+
   def create
     @article = Article.new(:title => params['title'], :body => params['body'])
     if @article.save
