@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @schmarticle.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @schmarticle.body %>
+</p>
+
+<%= link_to 'Edit', edit_schmarticle_path(@schmarticle) %> |
+<%= link_to 'Back', schmarticles_path %>

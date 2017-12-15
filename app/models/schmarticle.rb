@@ -1,0 +1,2 @@
+class Schmarticle < ApplicationRecord
+end

@@ -1,10 +1,7 @@
-<form action="<%= articles_path %>" method="post">
-  <p>Title:</p>
-  <input type="text" name="title">
-  <p>Body:</p>
-  <input type="text" name='body'>
-  <input type="submit" value="Submit">
-  <input  type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
-</form>
+<%= form_tag( articles_path, method: 'post') do %>
+  <%= label_tag(:title, "Title:") %>
+  <%= text_field_tag(:title) %>
+  <%= label_tag(:body, "Body:") %>
+  <%= text_area_tag(:body) %>
+  <%= submit_tag("Submit") %>
+<% end %>
